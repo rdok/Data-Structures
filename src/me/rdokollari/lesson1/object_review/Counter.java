@@ -19,15 +19,19 @@ package me.rdokollari.lesson1.object_review;
  * WARNING: you need to know definitions; question will be using those
  * definition.
  * 
+ * Can we use Counter.getTotalCounter()
+ * 
+ * Java docs describe code in class:
+ * 
  * @author Rizart Dokollari @ rdokollari.me
  * @since May 19, 2014
  */
 public class Counter {
-	// instance varialbe -- every instance of the counter will have a different
+	// instance variable -- every instance of the counter will have a different
 	// counter
 	private int count;
 	// class instance -- all variables will be same
-	// static variables cannot be acccessed if set to private
+	// static variables cannot be accessed if set to private
 	private static int totalCounter;
 
 	/**
@@ -44,7 +48,7 @@ public class Counter {
 	 * @param counter
 	 */
 	public Counter(int counter) {
-		setCount(count);
+		setCount(counter);
 		incrementCounter();
 	}
 
@@ -83,8 +87,8 @@ public class Counter {
 	 * @param count
 	 *            the count to set
 	 */
-	public void incrementCounter() {
-		this.count++;
+	public static void incrementCounter() {
+		totalCounter++;
 	}
 
 	/**

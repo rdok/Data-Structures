@@ -15,21 +15,16 @@
  ******************************************************************************/
 package me.rdokollari.lesson1.object_review;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
 /**
  * @author Rizart Dokollari @ rdokollari.me
  * @since May 19, 2014
  */
-public class TestCounter {
+public class TestCounter2 {
 
-	@Test
-	public void testToString() {
-		Counter c = new Counter();
-		assertEquals("Counter [getCount()=0]", c.toString());
-
+	public static void main(String[] args) {
+		double d1 = 3.2;
+		double d2 = 3.9999;
+		int i1 = (int) d1;
+		int i2 = (int) d2;
 	}
-
 }

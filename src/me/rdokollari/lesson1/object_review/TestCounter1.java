@@ -15,21 +15,21 @@
  ******************************************************************************/
 package me.rdokollari.lesson1.object_review;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
 /**
  * @author Rizart Dokollari @ rdokollari.me
  * @since May 19, 2014
  */
-public class TestCounter {
+public class TestCounter1 {
 
-	@Test
-	public void testToString() {
+	public static void main(String[] args) {
 		Counter c = new Counter();
-		assertEquals("Counter [getCount()=0]", c.toString());
+		Counter d = new Counter(10);
 
+		// the below does not copy the object, rather it
+		// instantiates
+		Counter e = c;
+		System.out.println(c);
+		System.out.println(d);
+		System.out.println(Counter.getTotalCounter());
 	}
-
 }
