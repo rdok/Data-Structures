@@ -15,16 +15,33 @@
  ******************************************************************************/
 package me.rdokollari.lesson1.object_review;
 
+import java.io.ObjectInputStream.GetField;
+import java.util.Arrays;
+import java.util.Random;
+
 /**
  * @author Rizart Dokollari @ rdokollari.me
  * @since May 19, 2014
  */
-public class TestCounter2 {
+public class TestArrays {
+	private static Random rand = new Random();
 
 	public static void main(String[] args) {
-		double d1 = 3.2;
-		double d2 = 3.9999;
-		int i1 = (int) d1;
-		int i2 = (int) d2;
+		int[] x = new int[10];
+
+		for (int i = 0; i < x.length; i++) {
+			x[i] = getRandomNumber();
+		}
+
+		System.out.println(Arrays.toString(x));
+
+		int[] y = x.clone();
+		y[0] = 0;
+		System.out.println(Arrays.toString(y));
+
+	}
+
+	private static int getRandomNumber() {
+		return rand.nextInt();
 	}
 }
