@@ -16,25 +16,25 @@
 package me.rdokollari.lesson1.object_review.exp;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * TODO: tomorrow, input until enter key pressed.
+ * TODO: tomorrow, input until enter key pressed. make it modular.
  * 
  * @author Rizart Dokollari @ rdokollari.me
  * @since May 19, 2014
  */
-public class TestKeyboardInput {
+public class KeyboardInput {
 
 	private Scanner scanner = new Scanner(System.in);
 	private final int TOT_NUM = 10;
 
 	public static void main(String[] args) {
-		new TestKeyboardInput();
+		new KeyboardInput();
 	}
 
-	public TestKeyboardInput() {
-		// 0 ends
+	public KeyboardInput() {
 		int[] x = new int[TOT_NUM];
 		boolean numberIsAdded;
 		boolean manualTerminate = false;
@@ -58,7 +58,7 @@ public class TestKeyboardInput {
 						x[i] = Integer.parseInt(userInput);
 					}
 					numberIsAdded = true; // acceptable key input
-				} catch (Exception InputMismatchException) {
+				} catch (InputMismatchException iME) {
 					System.out
 							.println("Only integer numbers are accepeted. Please re try.");
 				}
@@ -72,4 +72,5 @@ public class TestKeyboardInput {
 
 		System.out.println(Arrays.toString(x));
 	}
+
 }
