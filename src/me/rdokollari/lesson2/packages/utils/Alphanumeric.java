@@ -15,41 +15,15 @@
  ******************************************************************************/
 package me.rdokollari.lesson2.packages.utils;
 
-import java.util.InputMismatchException;
 import java.util.regex.Pattern;
 
 /**
  * @author Rizart Dokollari @ rdokollari.me
  * @since May 20, 2014
  */
-public class Numeric {
-
-	/**
-	 * Checks if given string is integer. Returns true if is integer, else
-	 * false.
-	 * 
-	 * @param text
-	 * @return
-	 */
-	public static boolean isInteger(String text) {
-		boolean isInteger = text.matches("[0-9]+") ? true : false;
-		// "\\d+[,.]?\\d+"
-		return isInteger;
-
-		// try {
-		// Integer.parseInt(text);
-		// return true;
-		// } catch (InputMismatchException iME) {
-		// return false;
-		// }
-
-	}
+public class Alphanumeric {
 
 	public static boolean isAplhanumeric(String input) {
 		return (Pattern.matches("\\w+", input));
-	}
-
-	public static boolean isAplhabetic(String input) {
-		return (Pattern.matches("[a-zA-Z]+", input));
 	}
 }
