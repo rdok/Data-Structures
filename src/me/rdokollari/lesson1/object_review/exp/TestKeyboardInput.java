@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package me.rdokollari.lesson1.object_review;
+package me.rdokollari.lesson1.object_review.exp;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -26,25 +26,48 @@ import java.util.Scanner;
  */
 public class TestKeyboardInput {
 
-	private static Scanner scanner = new Scanner(System.in);
+	private Scanner scanner = new Scanner(System.in);
+	private final int TOT_NUM = 10;
 
 	public static void main(String[] args) {
+		new TestKeyboardInput();
+	}
+
+	public TestKeyboardInput() {
 		// 0 ends
-		int[] x = new int[10];
+		int[] x = new int[TOT_NUM];
+		boolean numberIsAdded;
+		boolean manualTerminate = false;
+		String userInput;
 
 		for (int i = 0; i < x.length; i++) {
+			numberIsAdded = false;
 
 			System.out
-					.println("Please enter a integer number or enter for exit");
-			// TODO: not integer exception
-			System.out.println(x[i]);
-			try {
-				x[i] = scanner.nextInt();
-			} catch (Exception InputMismatchException) {
-				System.out
-						.println("Only integer numbers are accpeted. Please re try.");
+					.println("Please enter a integer number or 'Enter' button for exit");
+
+			// while user inputs not acceptable keys, loop
+			while (!numberIsAdded) {
+				try {
+					userInput = scanner.nextLine();
+					// if user presses enter key, terminate input key process
+					if (userInput.equals("")) {
+						manualTerminate = true;
+						break; // break out of while loop
+					} else {
+						x[i] = Integer.parseInt(userInput);
+					}
+					numberIsAdded = true; // acceptable key input
+				} catch (Exception InputMismatchException) {
+					System.out
+							.println("Only integer numbers are accepeted. Please re try.");
+				}
 			}
 
+			// terminate input process if user pressed enter key
+			if (manualTerminate) {
+				break;
+			}
 		}
 
 		System.out.println(Arrays.toString(x));
