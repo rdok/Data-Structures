@@ -19,53 +19,24 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
- * TODO: trim SPACE PRIN KAI META. (on all methods)
+ * 
+ * TODO: TRIM TO SPACE
  * 
  * @author Rizart Dokollari @ rdokollari.me
  * @since May 20, 2014
  */
-public class Numeric {
+public class Text {
 
 	private static Scanner input = new Scanner(System.in);
 
-	/**
-	 * Checks if given string is integer. Returns true if is integer, else
-	 * false.
-	 * 
-	 * @param text
-	 * @return
-	 */
-	public static boolean isInteger(String text) {
-		boolean isInteger = text.matches("[0-9]+") ? true : false;
-		// "\\d+[,.]?\\d+"
-		return isInteger;
-
-		// try {
-		// Integer.parseInt(text);
-		// return true;
-		// } catch (InputMismatchException iME) {
-		// return false;
-		// }
-
+	public static boolean isAplhabetic(String input) {
+		return (Pattern.matches("[a-zA-Z]+", input));
 	}
 
-	/**
-	 * 
-	 * @param string
-	 * @return
-	 */
-	public static boolean isNumeric(String string) {
-		return Pattern.matches("\\d+[,.]?\\d+", string) ? true : false;
+	public static boolean isAplhanumeric(String input) {
+		return (Pattern.matches("\\w+", input));
 	}
 
-	/**
-	 * 
-	 * @param message
-	 *            Message that prompts the user in order to input data
-	 * @param errorMessage
-	 *            the Error Message if user input is not a number
-	 * @return an Integer or null if Enter was pressed
-	 */
 	public static Integer readInt(String message, String errorMessage) {
 		Integer tempInput = null;
 		boolean correct = false;
@@ -87,6 +58,6 @@ public class Numeric {
 			}
 		} while (!correct);
 		return tempInput;
-	}
 
+	}
 }
