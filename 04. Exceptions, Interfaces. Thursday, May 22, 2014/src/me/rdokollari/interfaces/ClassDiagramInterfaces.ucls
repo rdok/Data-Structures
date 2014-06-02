@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="me.rdokollari.model.BoxedItem" 
+    project="4. Exceptions, Interfaces. Thursday, May 22, 2014" 
+    file="/4. Exceptions, Interfaces. Thursday, May 22, 2014/src/me/rdokollari/model/BoxedItem.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="459" width="244" x="462" y="-20"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" language="java" name="me.rdokollari.interfaces.Sellable" 
+    project="4. Exceptions, Interfaces. Thursday, May 22, 2014" 
+    file="/4. Exceptions, Interfaces. Thursday, May 22, 2014/src/me/rdokollari/interfaces/Sellable.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="865" y="95"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="3" language="java" name="me.rdokollari.interfaces.Transportable" 
+    project="4. Exceptions, Interfaces. Thursday, May 22, 2014" 
+    file="/4. Exceptions, Interfaces. Thursday, May 22, 2014/src/me/rdokollari/interfaces/Transportable.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="858" y="236"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="me.rdokollari.model.Product" 
+    project="4. Exceptions, Interfaces. Thursday, May 22, 2014" 
+    file="/4. Exceptions, Interfaces. Thursday, May 22, 2014/src/me/rdokollari/model/Product.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="281" y="223"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
