@@ -39,7 +39,13 @@ public class TestPuzzleSolve
 		set.add('w');
 		set.add('i');
 		set.add('n');
-		String solution = "win";
+		set.add('n');
+		set.add('n');
+		set.add('e');
+		set.add('r');
+		set.add('r');
+
+		String solution = "winner";
 
 		System.out.println(puzzleSolve.puzzlSolve(set.size(), "", set, solution));
 	}

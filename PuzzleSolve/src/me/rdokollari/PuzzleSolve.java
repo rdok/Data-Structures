@@ -49,7 +49,8 @@ public class PuzzleSolve
 				sequence = puzzlSolve(k - 1, sequence, set, solution);
 			}
 
-			if (!sequence.equals("win")) {
+			
+			if (!sequence.equals(solution)) {
 				set.add(i, currElem);
 				sequence = sequence.substring(0, sequence.length() - 1);
 			}
