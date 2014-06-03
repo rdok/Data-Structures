@@ -42,7 +42,7 @@ public class PuzzleSolve
 			sequence += Character.toString(currElem);
 
 			if (k == 1) {
-				if (sequence.equals("win")) {
+				if (sequence.equals(solution)) {
 					return sequence;
 				} // end inner if
 			} else {
