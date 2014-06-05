@@ -1,0 +1,13 @@
+package me.rdokollari.linked_lists;
+
+public class TestNode {
+	public static void main(String[] args) {
+		Node x = new Node("Node x");
+		Node y = new Node("Node y");
+
+		y.insertNode(newNode, 0);
+		System.out.println(y.getNodeWithIndex(0));
+
+	}// end of main()
+
+}

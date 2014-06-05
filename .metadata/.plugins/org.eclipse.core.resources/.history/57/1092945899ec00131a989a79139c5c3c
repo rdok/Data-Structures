@@ -1,0 +1,57 @@
+package me.rdokollari.linked_lists;
+
+public class Node {
+	String element;
+	Node next;
+
+	public Node() {
+		element = "";
+		next = null;
+	}
+
+	public void setElement(String e) {
+		element = e;
+	}
+
+	public void setNext(Node n) {
+		next = n;
+	}
+
+	public String getElement() {
+		return element;
+	}
+
+	public Node getNext() {
+		return next;
+	}
+
+	public void addNode() {
+		if (next == null) {
+			setNext(new Node());
+		} else {
+			next.addNode();
+		}
+	}
+
+	public void deleteLast() {
+		if (next != null) {
+			if (next.getNext() == null) {
+				setNext(null);
+			} else {
+				next.deleteLast();
+			}
+		}
+	}
+
+	public int length() {
+		int lenght = 1;
+
+		// if there is anther ndode.
+		if (next != null) {
+			lenght++;
+			next.length();
+		} else {
+			return 0;
+		}
+	}
+}

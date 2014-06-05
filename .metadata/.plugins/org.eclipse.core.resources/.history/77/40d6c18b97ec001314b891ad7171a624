@@ -1,0 +1,14 @@
+package llists;
+
+public class LListExamples {
+    public static void main(String[] args) {
+        Node x = new Node();
+        Node y = new Node();
+        
+        x.addNode();
+        x.addNode();
+
+//        x.setNext(y);
+//        y=null;
+    }// end of main()
+}// end of class
